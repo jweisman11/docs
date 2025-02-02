@@ -24,6 +24,9 @@ concurrency:
 jobs:
   # Build job
   build:
+    env:
+      BASE_URL: ${{ vars.BASE_URL }}
+      SITE_URL: ${{ vars.SITE_URL }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
